@@ -10,8 +10,8 @@
 </head>
 <body>
     <h1>Welcome to Sign-Up Page</h1>
-    <a href="{% url 'index' %}">&lt;Back</a>
-   
+    <a href="{% url 'index' %}"><button class="btn btn-warning">Home</button></a>
+    <br>
     <form action="" method="post">
         {% csrf_token %}
          {{ form.as_p }}

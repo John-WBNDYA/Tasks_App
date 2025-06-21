@@ -31,6 +31,8 @@ def login_view(request):
         if user is not None:
             login(request, user=user)
             return redirect("user_account")
+        else:
+            messages.error(request, "Login unsuccessful. Please try again")
         
     
     return render(request, "app/login.html")
@@ -62,7 +64,8 @@ def logout_view(request):
     The logout view
     """
     logout(request)
-    return render(request, "app/index.html")
+    messages.success(request, "Logged out successfully!")
+    return render(request, "app/login.html")
 
 
 def user_account(request):

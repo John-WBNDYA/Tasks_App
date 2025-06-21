@@ -1,0 +1,2 @@
+1. Add Loading feature
+2. Move on to styling login page and signup page
