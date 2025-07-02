@@ -93,6 +93,7 @@ def add_task(request):
             task = task_form.save(commit=False)
             task.user = request.user
             task.save()
+            messages.success(request, "Task added successfully!")
             return redirect(user_account)
     else:
         context = {
